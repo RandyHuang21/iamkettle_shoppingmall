@@ -1,115 +1,57 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-      <nav className="flex items-center justify-between bg-blue-600 p-6 text-white">
-        <div className="text-2xl font-bold">MyBrand</div>
-        <div className="space-x-4">
-          <a href="#" className="hover:underline">首頁</a>
-          <a href="#" className="hover:underline">商品</a>
-          <a href="#" className="hover:underline">關於我們</a>
-          <a href="#" className="hover:underline">聯絡我們</a>
-        </div>
-      </nav>
-      <h1 className="text-5xl font-bold mb-6">My Brand - 自己的品牌網站</h1>
-      <p className="text-xl text-gray-600">歡迎來到我的第一個現代化網頁！</p>
-        
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div style={{ margin: 0, fontFamily: 'Arial, sans-serif', background: '#f4f8fb' }}>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Banner */}
+      <section style={{ height: '100vh', background: 'linear-gradient(to bottom, #c2e9fb, #a1c4fd)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '20px' }}>
+        <h1 style={{ fontSize: '3em', marginBottom: '10px' }}>
+          這世界正經得太癲狂，<br />拯救世界就靠 Randy Huang！
+        </h1>
+        <p style={{ fontSize: '1.5em', color: '#333', marginBottom: '30px' }}>
+          這年代，會笑，比會賺更稀有。
+        </p>
+        <div>
+          <Link href="/shop">
+            <button style={{ padding: '10px 20px', margin: '5px', fontSize: '1.2em', border: 'none', borderRadius: '5px', background: '#4facfe', color: 'white', cursor: 'pointer' }}>找回快樂</button>
+          </Link>
+          <button style={{ padding: '10px 20px', margin: '5px', fontSize: '1.2em', border: 'none', borderRadius: '5px', background: '#00f2fe', color: 'white', cursor: 'pointer' }}>一起玩瘋</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* 我是誰區塊 */}
+      <section style={{ padding: '60px 20px', textAlign: 'center', background: 'white' }}>
+        <h2>我是 Randy Huang</h2>
+        <p style={{ maxWidth: '600px', margin: '20px auto', fontSize: '1.2em', color: '#555' }}>
+          一個拒絕活成公式的人，專門製作無用卻充滿快樂的小發明，讓世界在正經之餘，也能偷偷笑一下。
+        </p>
+      </section>
+
+      {/* 小發明介紹區 */}
+      <section style={{ padding: '60px 20px', background: '#eef6fb', textAlign: 'center' }}>
+        <h2>我的小小亂搞作品</h2>
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginTop: '30px' }}>
+          <div style={{ background: 'white', padding: '20px', borderRadius: '10px', width: '250px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+            <h3>AI自動套圈圈機</h3>
+            <p>自動出圈，自動套圈，失敗也會笑出來的神機器。</p>
+          </div>
+          <div style={{ background: 'white', padding: '20px', borderRadius: '10px', width: '250px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+            <h3>Coming Soon...</h3>
+            <p>下一個更ㄎ一ㄤ的小發明，敬請期待！</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section style={{ padding: '60px 20px', textAlign: 'center', background: 'linear-gradient(to right, #43e97b, #38f9d7)', color: 'white' }}>
+        <h2>想要偷渡一點快樂嗎？</h2>
+        <p style={{ fontSize: '1.2em', margin: '20px auto', maxWidth: '600px' }}>
+          加入 Randy 的快樂實驗室，一起用小小的叛逆對抗正經世界。
+        </p>
+        <button style={{ padding: '10px 20px', marginTop: '20px', fontSize: '1.2em', border: 'none', borderRadius: '5px', background: 'white', color: '#333', cursor: 'pointer' }}>訂閱我們</button>
+      </section>
+
     </div>
-  );
+  )
 }
